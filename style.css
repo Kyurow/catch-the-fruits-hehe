@@ -1,0 +1,17 @@
+/* Hapus margin/padding default browser untuk tampilan penuh */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center; /* Untuk memusatkan canvas secara horizontal (canvas di-set display block) */
+}
+
+/* Gaya untuk canvas game */
+canvas {
+  display: block;
+  margin: 0 auto;        /* Tengah-kan canvas */
+  width: 1000vw;           /* Responsive: lebar canvas mengikuti lebar browser/container */
+  max-width: 800px;      /* (Opsional) ubah sesuai lebar asli BACKGROUND.png untuk hindari pixelation */
+  height: 10vh;          /* Tinggi auto agar proporsional */
+  border: 1px solid #000; /* (Opsional) garis tepi agar tampak batas canvas */
+}

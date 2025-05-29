@@ -28,6 +28,15 @@ function resetGame() {
     player.x = canvas.width / 2 - player.width / 2;
 }
 
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+
+leftBtn.addEventListener("touchstart", () => isTouchingLeft = true);
+leftBtn.addEventListener("touchend", () => isTouchingLeft = false);
+
+rightBtn.addEventListener("touchstart", () => isTouchingRight = true);
+rightBtn.addEventListener("touchend", () => isTouchingRight = false);
+
 var isTouchingLeft = false;
 var isTouchingRight = false;
 
@@ -112,8 +121,8 @@ bgImage.onload = function() {
     
         // Tampilkan tombol restart
         
-        restartBtn.style.display = "block";
-        startBtn.style.display = "block";
+   
+       
         return;
     }
 };

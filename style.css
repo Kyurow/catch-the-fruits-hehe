@@ -2,16 +2,41 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  text-align: center; /* Untuk memusatkan canvas secara horizontal (canvas di-set display block) */
+  background-color: #00b3f976;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 /* Gaya untuk canvas game */
 canvas {
+  width: 80vw;
+  max-width: 640px;
+  height: auto;
+  border: 5px solid #000;
+  border-radius: 10px;
   display: block;
-  margin: 0 auto;        /* Tengah-kan canvas */
-  width: 1000vw;           /* Responsive: lebar canvas mengikuti lebar browser/container */
-  max-width: 800px;      /* (Opsional) ubah sesuai lebar asli BACKGROUND.png untuk hindari pixelation */
-  height: 10vh;          /* Tinggi auto agar proporsional */
-  border: 1px solid #000; /* (Opsional) garis tepi agar tampak batas canvas */
+  position: static; /* HAPUS absolute */
+  transform: none;  /* HAPUS transform */
+  touch-action: none;
 }
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+

@@ -28,7 +28,8 @@ function resetGame() {
     player.x = canvas.width / 2 - player.width / 2;
 }
 
-
+var isTouchingLeft = false;
+var isTouchingRight = false;
 
 // Ambil elemen canvas dan konteks 2D
 var canvas = document.getElementById("gameCanvas");

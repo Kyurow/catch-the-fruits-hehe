@@ -69,7 +69,8 @@ button {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 90px;
+  margin-top: 16px;
+  size: 30px;
 }
 
 .mobile-controls button {

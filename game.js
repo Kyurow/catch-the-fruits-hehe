@@ -51,7 +51,7 @@ bgImage.src = "assets/images/BACKGROUND.png";
 
 var playerImage = new Image();
 playerImage.src = "assets/images/karakterfinal.png"; 
-// ^ GANTI jika nama atau lokasi gambar karakter berbeda
+
 
 // Buah-buahan: jeruk, pisang, anggur
 var fruitImages = [];
@@ -71,17 +71,17 @@ var grapesImage = new Image();
 grapesImage.src = "assets/images/anggur.png"; 
 fruitImages.push(grapesImage);
 
-// **Status game**: skor, jumlah gagal (misses), dan flag game over
+// skor, jumlah gagal (misses), dan flag game over
 var score = 0;
 var misses = 0;
-var maxMisses = 0;   // Batas gagal (game over saat gagal >= 3)
+var maxMisses = 0;   // Batas gagal 
 var gameOver = false;
 
 // **Objek pemain (karakter)** dengan properti awal
 var player = {
-    x: 80,          // Posisi X (dapat disesuaikan, akan diatur ulang saat background load)
-    y: 0,            // Posisi Y (akan diatur ulang saat background load)
-    width: 30,       // Lebar karakter (ubah agar sesuai ukuran gambar karakter)
+    x: 80,          // Posisi X 
+    y: 0,            // Posisi Y 
+    width: 30,       // Lebar karakter 
     height: 30,      // Tinggi karakter (ubah sesuai gambar karakter)
     speed: 5        // Kecepatan gerak karakter (atur lebih tinggi untuk karakter lebih cepat)
 };
@@ -89,15 +89,15 @@ var player = {
 // Daftar buah-buah yang sedang jatuh
 var fruits = [];
 
-// **Pengaturan spawn buah** (waktu mulai dan interval)
+// Pengaturan spawn buah
 var spawnStartTime = Date.now();
 var lastSpawnTime = Date.now();
-var spawnInterval = 1000; // Waktu antar spawn buah dalam milidetik (1 detik). Bisa diubah.
+var spawnInterval = 1000; // Waktu spawn buah dalam milidetik (1 detik)
 var spawnMax = 1;         // Jumlah maksimal buah bersamaan (akan naik setelah 10 detik)
 
 // **Bunyi**: suara tangkap buah dan suara game over
-var catchSound = new Audio("assets/sounds/catch.wav");         // Ganti nama file suara tangkap jika perlu
-var gameOverSound = new Audio("assets/sounds/endsound.mp3");   // Ganti nama file suara game over jika perlu
+var catchSound = new Audio("assets/sounds/catch.wav");         
+var gameOverSound = new Audio("assets/sounds/endsound.mp3");   
 
 // Setelah gambar latar load, atur ukuran canvas dan pos karakter, lalu mulai game loop
 bgImage.onload = function() {

@@ -74,7 +74,7 @@ fruitImages.push(grapesImage);
 // skor, jumlah gagal (misses), dan flag game over
 var score = 0;
 var misses = 0;
-var maxMisses = 0;   // Batas gagal 
+var maxMisses = 3;   // Batas gagal 
 var gameOver = false;
 
 // **Objek pemain (karakter)** dengan properti awal

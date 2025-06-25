@@ -24,7 +24,7 @@ function resetGame() {
     fruits = [];
     spawnStartTime = Date.now();
     lastSpawnTime = Date.now();
-    spawnMax = 1;
+    spawnMax = 10;
     player.x = canvas.width / 2 - player.width / 2;
 }
 
